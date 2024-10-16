@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <stdexcept>
-#include <sstream>
-#include <stack>
+//#include <stdexcept>
+//#include <sstream>
+//#include <stack>
 #include <cstdlib> //for atof()
