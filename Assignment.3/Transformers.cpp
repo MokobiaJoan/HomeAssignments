@@ -1,53 +1,87 @@
-/*Mokobia Joan Chidiebere, st135508@student.spbu.ru, 24.B83-mm*/
+/*Mokobia Joan Chidiebere,  st135508@student.spbu.ru   Project 1*/
 #include "Transformers.h"
+#include "weapon.h"
+#include <string>
+
  
+ //constructor
+ BaseTransformer::BaseTransformer(){}
+BaseTransformer:: BaseTransformer(std::string name, std::string brand, std::string colour,
+std:: string shape, int height, Memory memory){
+
+    _name = name;
+    _brand = brand;
+    _colour = colour;
+    _shape = shape;
+    _height = height;
+    _weapon = Weapon();
+    *_memory = memory;
+    
+
+}
+//destructor
+BaseTransformer::~BaseTransformer(){
+std::cout<<"destructor clears "<<std::endl;
+}
+
+//information about the transformer
+void BaseTransformer :: aboutRobot(){
+
+     std::cout<<"Information about "<<_name<<"\n";
+    std::cout<<"Brand : "<<_brand<<"\n";
+    std::cout<<"Colour : "<<_colour<<"\n";
+    std::cout<<"Shape : "<<_shape<<"\n";
+    std::cout<<"Height :"<<_height<<"\n";
+
+}
  
 //get method set method and validation
-std::string Basetransformer::getName() const  {
-    return name;
+std::string BaseTransformer::getName() const  {
+    return _name;
 }
-void Basetransformer ::setName( const std::string& newName){
-    name = newName;
+void BaseTransformer ::setName( const std::string& newName){
+    _name = newName;
 }
-bool Basetransformer :: isValidName() const{
-    return !name.empty();
+bool BaseTransformer :: isValidName() const{
+    return !_name.empty();
 }
 //brand
-std::string Basetransformer:: getBrand(){
-    return brand;
+std::string BaseTransformer:: getBrand(){
+    return _brand;
 }
-void Basetransformer::setBrand(std::string newBrand){
-    brand = newBrand;
+void BaseTransformer::setBrand(std::string newBrand){
+    _brand = newBrand;
 }
-bool Basetransformer :: isValidBrand() const{
-    return !brand.empty();
+bool BaseTransformer :: isValidBrand() const{
+    return !_brand.empty();
 }
-std:: string Basetransformer::getColour(){
-    return colour;
+std:: string BaseTransformer::getColour(){
+    return _colour;
 }
-void Basetransformer::setColour(std::string newColour){
-    colour = newColour;
+void BaseTransformer::setColour(std::string newColour){
+    _colour = newColour;
 }
-bool Basetransformer::isValidColour() const{
-    return !colour.empty();
+bool BaseTransformer::isValidColour() const{
+    return !_colour.empty();
 }
 //shape
-std::string Basetransformer :: getShape(){
-    return shape;
+std::string BaseTransformer :: getShape(){
+    return _shape;
 }
-void Basetransformer::setShape(std::string newShape){
+void BaseTransformer::setShape(std::string newShape){
     
 }
-bool Basetransformer::isValidShape() const{
-    return !shape.empty();
+bool BaseTransformer::isValidShape() const{
+    return !_shape.empty();
 }
 //height
-int Basetransformer::getHeight(){
-    return height;
+int BaseTransformer::getHeight(){
+    return _height;
 }
-void Basetransformer::setHeight(int newHeight){
-         height = newHeight;
+void BaseTransformer::setHeight(int newHeight){
+         _height = newHeight;
 }
-bool Basetransformer :: isValidHeight() const{
-    return !height > 0;
+bool BaseTransformer :: isValidHeight() const{
+    return !_height > 0;
 }
+

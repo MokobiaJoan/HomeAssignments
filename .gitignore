@@ -1,3 +1,5 @@
 input.bin
 output.bin
 *.bin
+.vscode
+keys.json

@@ -1,4 +1,4 @@
-/*Mokobia Joan Chidiebere, st135508@student.spbu.ru, 24.B83-mm*/
+/*Mokobia Joan Chidiebere,  st135508@student.spbu.ru   Project 1*/
 #include <gtest/gtest.h>
 #include "Transformers.h"
 #include "autobot.h"
@@ -9,37 +9,34 @@
    
 // base class test
 TEST(TransformerTest, transformers){
-   Basetransformer myRobo2;
-   myRobo2.setName("Uranium");
+   BaseTransformer myRobo2;
+   myRobo2.setName("Titanus");
    myRobo2.setHeight(150);
    EXPECT_EQ(myRobo2.getHeight(),150);
-   EXPECT_EQ(myRobo2.getName(),"Uranium");
+   EXPECT_EQ(myRobo2.getName(),"Titanus");
 }
 //autobots
  //we initialized the value of the autobots counter 
-   int Autobot:: autobotCounter = 0;
+  int Autobot::autobotCounter=0;
 TEST(AutobotTest, autobotsCount){
+
     Autobot autobot;
     Autobot autobot1;
     Autobot autobotQ;
-    Autobot autobotR;
-    EXPECT_EQ(Autobot:: autobotCounter,4);
+    EXPECT_EQ(Autobot:: autobotCounter,3);
 }
 //dinobot
 //we initialized the value of the counter 
- int Dinobot:: dinobotCounter = 0;
-
+int Dinobot::dinobotCounter=0;
 TEST(DinobotTest, dinobotsCount){
     Dinobot dinbot;
-    Dinobot dinbotB;
-    Dinobot dinbotC;
-    EXPECT_EQ(Dinobot:: dinobotCounter,3);
+    EXPECT_EQ(Dinobot:: dinobotCounter,1);
 }
 //predacons
 TEST(PredaconTest, predaconGetName){
      Predacon predacon;
-    predacon.setName("Lithium");
-    EXPECT_EQ(predacon.getName(),"Lithium");
+    predacon.setName("Chidima");
+    EXPECT_EQ(predacon.getName(),"Chidima");
 }
 
 

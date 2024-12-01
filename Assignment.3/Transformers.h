@@ -1,61 +1,39 @@
-/*Mokobia Joan Chidiebere, st135508@student.spbu.ru, 24.B83-mm*/
+/*Mokobia Joan Chidiebere,  st135508@student.spbu.ru   Project 1*/
 
 #ifndef TRANSFORMERS_H
 #define TRANSFORMERS_H
-#include <iostream>
+
+#include "weapon.h"
+#include "memory.h"
 #include <string>
-//using std::string;
-#include <fstream>
 
-class Weapon{
-    private:
-    std::string name;
-    int size;
-
-    public:
-    std::string getName() const{
-    return name;
-}
-void setName( const std::string& newName){
-    name = newName;
-}
-int getSize() const{
-    return size;
-}
-void setSize( int newSize){
-    size = newSize;
-}
-};
-
-class Basetransformer{
+class BaseTransformer{
 private: 
-std::string name;
-std::string brand;
-std::string colour;
-std::string shape;
-int height;
+    std::string _name;
+    std::string _brand;
+    std::string _colour;
+    std::string _shape;
+    int _height;
+    Memory *_memory;
+    Weapon _weapon;  
+    
 
 public:
+//default con structor.
+BaseTransformer();
 //constructor
-Basetransformer(){}
+BaseTransformer(std::string _name, std::string _brand, std::string _colour, std::string _shape, int _height, Memory _memory );
 //destructor
-~Basetransformer(){};
-Weapon weapon;
-//information about the transformer
-void aboutRobot(){
-   std::cout<<"Information about "<<name<<"\n";
-   std::cout<<"Brand : "<<brand<<"\n";
-   std::cout<<"Colour : "<<colour<<"\n";
-   std::cout<<"Shape : "<<shape<<"\n";
-   std::cout<<"Height :"<<height<<"\n";
-   std::cout<<"Weapon name:"<<weapon.getName()<<"\n";
-   std::cout<<"Weapon size:"<<weapon.getSize()<<"\n";
+~BaseTransformer();
 
-}
+//information about the transformer
+virtual void  aboutRobot();
+
 //get method set method and validation
 std::string getName() const;
 void setName( const std::string& newName);
 bool isValidName() const;
+
 //brand
 std::string getBrand();
 void setBrand(std::string newBrand);
