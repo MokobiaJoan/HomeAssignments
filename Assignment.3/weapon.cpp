@@ -1,4 +1,4 @@
-/*Mokobia Joan Chidiebere,  st135508@student.spbu.ru   Project 1*/
+/*Mokobia Joan Chidiebere, st135508@student.spbu.ru, 24.B83-mm*/
 #include "weapon.h"
 
 std::string Weapon :: getName() const{
