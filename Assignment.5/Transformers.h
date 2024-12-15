@@ -28,7 +28,7 @@ class BaseTransformer
     BaseTransformer(int height);
     
     //destructor
-    ~BaseTransformer();
+    //~BaseTransformer();
 
     //information about the transformer
     virtual void  aboutRobot();
@@ -37,6 +37,10 @@ class BaseTransformer
     bool operator <(const BaseTransformer& other) const;
     bool operator >(const BaseTransformer& other) const;
 
+    //virtual
+    virtual void transform();
+    virtual void openFire();
+    virtual void ulta();
 
 
     //get method set method and validation

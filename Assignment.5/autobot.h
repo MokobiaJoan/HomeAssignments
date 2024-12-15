@@ -14,6 +14,7 @@ class Autobot : public BaseTransformer
     std::string _groundVehicle;
     
     public:
+     
     static int  autobotCounter;
     //constructor
     Autobot();
@@ -27,6 +28,9 @@ class Autobot : public BaseTransformer
     bool operator<(const Autobot& other) const;
     bool operator>(const Autobot& other) const;
 
+    void transform() override;
+    void openFire() override;
+    void ulta() override;
 
  
     std::string getMoralAlignemt() const;

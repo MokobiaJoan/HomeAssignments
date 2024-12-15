@@ -27,9 +27,26 @@ BaseTransformer::BaseTransformer(int height)
 }
 
 //destructor
-BaseTransformer::~BaseTransformer()
-{
-    std::cout<<"destructor clears "<<std::endl;
+//BaseTransformer::~BaseTransformer()
+//{
+   // std::cout<<"destructor clears "<<std::endl;
+//} 
+
+
+//virtual
+void BaseTransformer::transform() {
+    std::cout << "Method 'Transform' of class 'Transformer'\n";
+    std::cout << "TRANSFORMING OF Transformer .......\n\n";
+}
+
+void BaseTransformer::openFire() {
+    std::cout << "Method 'openFire' of class 'Transformer'\n";
+    std::cout << "Transformer, fireeee!!!\n\n";
+}
+
+void BaseTransformer::ulta() {
+    std::cout << "Method 'ulta' of class 'Transformer'\n";
+    std::cout << "MEGA ULTA OF Transformer! HIT!!!\n\n";
 }
 
 //information about the transformer

@@ -2,12 +2,11 @@
 
 #include "dinobot.h"
 #include <string>
-Dinobot :: Dinobot()
-{
-    dinobotCounter++;
+
+
+Dinobot::Dinobot(){
+    
 }
-
-
 Dinobot :: Dinobot(std::string dinosaur, std::string dangerous)
 {
     _dinosaurForm = dinosaur; 
@@ -17,6 +16,22 @@ Dinobot :: Dinobot(std::string dinosaur, std::string dangerous)
 Dinobot::Dinobot(std::string dinosaur)
 {
     _dinosaurForm = dinosaur;
+}
+
+//virtual
+void Dinobot::transform() {
+    std::cout << "Method 'transform' of class 'Dinobot'\n";
+    std::cout << "TRANSFORMING OF Dinobot\n\n";
+}
+
+void Dinobot::openFire() {
+    std::cout << "Method 'openFire' of class 'Dinobot'\n";
+    std::cout << "Dinobot go \n\n";
+}
+
+void Dinobot::ulta() {
+    std::cout << "Method 'ulta' of class 'Dinobot'\n";
+    std::cout << "MEGA ULTA OF Dinobot \n\n";
 }
 
 //set methods
@@ -43,6 +58,7 @@ std::string Dinobot :: getDinosaurForm() const
 {
     return _dinosaurForm;
 }
+
 //void  setDinosaurForm(std::string newDinosaurForm);
 
 std::string Dinobot :: getDangerous() const

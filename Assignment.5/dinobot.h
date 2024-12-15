@@ -1,4 +1,4 @@
-/*Mokobia Joan Chidiebere, st135508@student.spbu.ru, 24.B83-mm*/
+//Mokobia Jane Chidima, st135735@student.spbu.ru, 24.B83
 #include "Transformers.h"
 #ifndef DINOBOT_H
 #define DINOBOT_H
@@ -13,6 +13,11 @@ class Dinobot : public BaseTransformer
     std::string _dangerous;
 
     public:
+
+    void transform() override;
+    void openFire() override;
+    void ulta() override;
+
     //+1 when an object is created
     static  int  dinobotCounter;
 
@@ -24,6 +29,7 @@ class Dinobot : public BaseTransformer
 
     //third
     Dinobot(std::string dinosaur);
+
 
     //comparison
     bool operator <(const Dinobot& other) const;

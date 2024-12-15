@@ -14,10 +14,27 @@ Autobot::Autobot(std::string moral, std::string vehicle)
 
 Autobot::Autobot()
 {
-    autobotCounter++;
+    //autobotCounter++;
 }
 Autobot::Autobot(std::string  moral){
     _moralAlignment = moral;
+}
+
+//virtual
+
+void Autobot::transform() {
+    std::cout << "Method 'transform' of class 'Autobot'\n";
+    std::cout << "TRANSFORMING OF Autobot .......\n\n";
+}
+
+void Autobot::openFire() {
+    std::cout << "Method 'openFire' of class 'Autobot'\n";
+    std::cout << "Autobot, HIT!!!\n\n";
+}
+
+void Autobot::ulta() {
+    std::cout << "Method 'ulta' of class 'Autobot'\n";
+    std::cout << "MEGA ULTA OF Autobot! HIT!!!\n\n";
 }
 
 //comparison operators
