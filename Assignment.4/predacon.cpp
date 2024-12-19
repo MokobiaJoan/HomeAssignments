@@ -15,7 +15,7 @@ Predacon :: Predacon(std::string beast, std::string peace)
 //third
 Predacon::Predacon(std::string beast)
 {
-    _beastForm = beast;
+   Predacon(beast, "bobo");
 }
 
 //set method

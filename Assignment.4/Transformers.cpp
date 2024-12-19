@@ -23,7 +23,7 @@ std:: string shape, int height, Memory memory)
 //third
 BaseTransformer::BaseTransformer(int height)
 {
-    _height = height;
+    BaseTransformer("John", "HHL", "Skyblue","PH", height, Memory() );
 }
 
 //destructor
@@ -112,7 +112,7 @@ void BaseTransformer::setHeight(int newHeight)
 }
 bool BaseTransformer :: isValidHeight() const
 {
-    return !_height > 0;
+    return _height > 0;
 }
 
 //os

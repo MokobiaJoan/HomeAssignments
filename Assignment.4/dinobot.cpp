@@ -16,7 +16,7 @@ Dinobot :: Dinobot(std::string dinosaur, std::string dangerous)
 //third con
 Dinobot::Dinobot(std::string dinosaur)
 {
-    _dinosaurForm = dinosaur;
+    Dinobot(dinosaur, "dodo");
 }
 
 //set methods

@@ -17,7 +17,7 @@ Autobot::Autobot()
     autobotCounter++;
 }
 Autobot::Autobot(std::string  moral){
-    _moralAlignment = moral;
+    Autobot(moral, "yuyu");
 }
 
 //comparison operators

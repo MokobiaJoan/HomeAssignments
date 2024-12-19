@@ -10,9 +10,9 @@ A = ar
 
 AFLAGS = rsv
 
-CCXFLAGS = -I. -std=c++17 -Wall -g -fPIC
+CXXFLAGS = -I. -std=c++17 -Werror -Wpedantic -Wall -g -fPIC
 
-LDXXFLAGS = $(CCXFLAGS) -L. -l:$(LIBPROJECT)
+LDXXFLAGS = $(CXXFLAGS) -L. -l:$(LIBPROJECT)
 
 LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -lpthread
 
@@ -47,7 +47,7 @@ all: $(PROJECT)
 .PHONY: clean
 
 clean:
-	rm -f *.o .a
+	rm -f *.o 
 
 cleanall: clean
 	rm -f $(PROJECT)
