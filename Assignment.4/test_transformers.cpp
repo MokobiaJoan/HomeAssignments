@@ -62,38 +62,38 @@ TEST(PredaconTest, predaconGetName)
 
 TEST(Autobot, CheckComparison) {
     Autobot abot1;
-    abot1.setMoralAlignmet("120");
+    abot1.setMoralAlignmet("3");
     Autobot abot2;
-    abot2.setMoralAlignmet("35");
-    int ab1 = stoi(abot1.getMoralAlignemt());
-    int ab2 = stoi(abot2.getMoralAlignemt());
-    ASSERT_TRUE(ab1> ab2);
-    ASSERT_FALSE(ab1 < ab2);
+    abot2.setMoralAlignmet("5");
+    //int ab1 = stoi(abot1.getMoralAlignemt());
+    //int ab2 = stoi(abot2.getMoralAlignemt());
+    ASSERT_FALSE(abot1 > abot2);
+    ASSERT_TRUE(abot1 < abot2);
 }
 
  TEST(Dinobot, CheckComparison) {
     Dinobot dino1;
-    dino1.setDangerous("12");
+    dino1.setDangerous("5");
     dino1.setDinosaurForm("5");
     Dinobot dino2;
     dino2.setDangerous("3");
     dino2.setDinosaurForm("3");
-    int dn1 = stoi(dino1.getDangerous());
-    int dn2 = stoi(dino2.getDangerous());
-    ASSERT_TRUE(dn1 > dn2);
-    ASSERT_FALSE(dn1 < dn2);
+    //int dn1 = stoi(dino1.getDangerous());
+    //nt dn2 = stoi(dino2.getDangerous());
+    ASSERT_TRUE(dino1 > dino2);
+    ASSERT_FALSE(dino1 < dino2);
 } 
 
 TEST(Predacon, CheckComparison) {
     Predacon pcon1;
-    pcon1.setBeastForm("10");
+    pcon1.setPeaceful("3");
     Predacon pcon2;
-    pcon2.setPeaceful("5");
-    int pn1 = stoi(pcon1.getBeastForm());
-    int pn2 = stoi(pcon2.getPeaceful());
+    pcon2.setPeaceful("7");
+    //int pn1 = stoi(pcon1.getBeastForm());
+    //int pn2 = stoi(pcon2.getPeaceful());
 
-    ASSERT_FALSE(pn2 > pn1);
-    ASSERT_TRUE(pn2 < pn1);
+    ASSERT_TRUE(pcon2 > pcon1);
+    ASSERT_FALSE(pcon2 < pcon1);
 } 
 
 
